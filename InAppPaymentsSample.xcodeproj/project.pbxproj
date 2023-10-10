@@ -20,6 +20,8 @@
 		4188F6412AC8CD8A00C7D4A8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4188F63E2AC8CD8A00C7D4A8 /* AppDelegate.swift */; };
 		4188F6422AC8CD8A00C7D4A8 /* App.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4188F63F2AC8CD8A00C7D4A8 /* App.swift */; };
 		4188F6432AC8CD8A00C7D4A8 /* CardEntryForm.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4188F6402AC8CD8A00C7D4A8 /* CardEntryForm.swift */; };
+		41F9D7592AD1B50D00813620 /* ApplePayForm.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41F9D7582AD1B50D00813620 /* ApplePayForm.swift */; };
+		41F9D75C2AD1DDE000813620 /* TransactionBackend.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41F9D75B2AD1DDE000813620 /* TransactionBackend.swift */; };
 		72B97890219CE5FB001C964B /* ChargeApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72B9788F219CE5FB001C964B /* ChargeApi.swift */; };
 		72C92A02217E8CFF006A02AF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 72C92A01217E8CFF006A02AF /* Assets.xcassets */; };
 		72C92A05217E8CFF006A02AF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 72C92A03217E8CFF006A02AF /* LaunchScreen.storyboard */; };
@@ -57,8 +59,10 @@
 		4188F63E2AC8CD8A00C7D4A8 /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AppDelegate.swift; path = old/InAppPaymentsSample/AppDelegate.swift; sourceTree = SOURCE_ROOT; };
 		4188F63F2AC8CD8A00C7D4A8 /* App.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = App.swift; path = old/InAppPaymentsSample/App.swift; sourceTree = SOURCE_ROOT; };
 		4188F6402AC8CD8A00C7D4A8 /* CardEntryForm.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CardEntryForm.swift; path = old/InAppPaymentsSample/CardEntryForm.swift; sourceTree = SOURCE_ROOT; };
+		41F9D7582AD1B50D00813620 /* ApplePayForm.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApplePayForm.swift; sourceTree = "<group>"; };
+		41F9D75A2AD1B51600813620 /* InAppPaymentsSample.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; name = InAppPaymentsSample.entitlements; path = "Ignore Below/InAppPaymentsSample.entitlements"; sourceTree = "<group>"; };
+		41F9D75B2AD1DDE000813620 /* TransactionBackend.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionBackend.swift; sourceTree = "<group>"; };
 		53C31A54A62C6BEDE218BA60 /* Pods_InAppPaymentsSample.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_InAppPaymentsSample.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		726602272183C5AF00EAB0D9 /* mCommExample.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = mCommExample.entitlements; sourceTree = "<group>"; };
 		72B9788F219CE5FB001C964B /* ChargeApi.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChargeApi.swift; sourceTree = "<group>"; };
 		72C929F7217E8CFE006A02AF /* InAppPaymentsSample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = InAppPaymentsSample.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		72C92A01217E8CFF006A02AF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -89,7 +93,6 @@
 			isa = PBXGroup;
 			children = (
 				2E46D2E621B9A672006CA233 /* Color.swift */,
-				2E46D2F521B9C7AA006CA233 /* Constants.swift */,
 				2E46D2F721B9D65D006CA233 /* Style.swift */,
 			);
 			path = Constants;
@@ -128,6 +131,27 @@
 				2E46D2FB21B9E4A2006CA233 /* HeaderView.swift */,
 			);
 			path = Generators;
+			sourceTree = "<group>";
+		};
+		4188F6442AC8CED300C7D4A8 /* Sample */ = {
+			isa = PBXGroup;
+			children = (
+				72C92A03217E8CFF006A02AF /* LaunchScreen.storyboard */,
+				2E46D2F421B9C746006CA233 /* Network */,
+				2E46D2ED21B9AE46006CA233 /* Animations */,
+				2E46D2E821B9AAB2006CA233 /* extensions */,
+				2E46D2E521B9A66A006CA233 /* Constants */,
+				72EB0DBB2187CE6C0010CE0B /* Views */,
+				72EB0DBA2187CE650010CE0B /* Controllers */,
+			);
+			path = Sample;
+			sourceTree = "<group>";
+		};
+		4188F6452AC8CEFD00C7D4A8 /* Ignore Below */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = "Ignore Below";
 			sourceTree = "<group>";
 		};
 		4D2CBFB751DB38ABB886D1EE /* Frameworks */ = {
@@ -169,19 +193,17 @@
 		72C929F9217E8CFE006A02AF /* InAppPaymentsSample */ = {
 			isa = PBXGroup;
 			children = (
-				2E46D2F421B9C746006CA233 /* Network */,
-				2E46D2ED21B9AE46006CA233 /* Animations */,
-				2E46D2E821B9AAB2006CA233 /* extensions */,
-				2E46D2E521B9A66A006CA233 /* Constants */,
-				72EB0DBB2187CE6C0010CE0B /* Views */,
-				72EB0DBA2187CE650010CE0B /* Controllers */,
-				726602272183C5AF00EAB0D9 /* mCommExample.entitlements */,
 				4188F63F2AC8CD8A00C7D4A8 /* App.swift */,
-				4188F63E2AC8CD8A00C7D4A8 /* AppDelegate.swift */,
 				4188F6402AC8CD8A00C7D4A8 /* CardEntryForm.swift */,
+				41F9D7582AD1B50D00813620 /* ApplePayForm.swift */,
+				41F9D75B2AD1DDE000813620 /* TransactionBackend.swift */,
+				4188F6452AC8CEFD00C7D4A8 /* Ignore Below */,
+				4188F63E2AC8CD8A00C7D4A8 /* AppDelegate.swift */,
+				41F9D75A2AD1B51600813620 /* InAppPaymentsSample.entitlements */,
 				72C92A01217E8CFF006A02AF /* Assets.xcassets */,
-				72C92A03217E8CFF006A02AF /* LaunchScreen.storyboard */,
 				72C92A06217E8CFF006A02AF /* Info.plist */,
+				4188F6442AC8CED300C7D4A8 /* Sample */,
+				2E46D2F521B9C7AA006CA233 /* Constants.swift */,
 			);
 			path = InAppPaymentsSample;
 			sourceTree = "<group>";
@@ -352,12 +374,14 @@
 				2E46D2E721B9A672006CA233 /* Color.swift in Sources */,
 				72C92A182180C3FF006A02AF /* OrderView.swift in Sources */,
 				4188F6432AC8CD8A00C7D4A8 /* CardEntryForm.swift in Sources */,
+				41F9D75C2AD1DDE000813620 /* TransactionBackend.swift in Sources */,
 				4188F6422AC8CD8A00C7D4A8 /* App.swift in Sources */,
 				72B97890219CE5FB001C964B /* ChargeApi.swift in Sources */,
 				72C92A12217E926E006A02AF /* ExampleViewController.swift in Sources */,
 				2E58CC6621B7409000DFE6B0 /* TableRowView.swift in Sources */,
 				2E46D2F621B9C7AA006CA233 /* Constants.swift in Sources */,
 				2E46D2F321B9C207006CA233 /* OrderNavigationController.swift in Sources */,
+				41F9D7592AD1B50D00813620 /* ApplePayForm.swift in Sources */,
 				2E46D2EF21B9AE52006CA233 /* HalfSheetPresentationControllerHeightProtocol.swift in Sources */,
 				4188F6412AC8CD8A00C7D4A8 /* AppDelegate.swift in Sources */,
 				2E46D2FC21B9E4A2006CA233 /* HeaderView.swift in Sources */,
@@ -496,6 +520,7 @@
 			baseConfigurationReference = 9CBD217F62E5DBF3C04A1CCB /* Pods-InAppPaymentsSample.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = InAppPaymentsSample/InAppPaymentsSample.entitlements;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = X622SX6D57;
@@ -505,7 +530,7 @@
 					"$(PROJECT_DIR)",
 				);
 				INFOPLIST_FILE = InAppPaymentsSample/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 11.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 16;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "BL.google-square-hackathon";
 				PRODUCT_NAME = InAppPaymentsSample;
@@ -520,6 +545,7 @@
 			baseConfigurationReference = A82933F3919BDE3EA6308E84 /* Pods-InAppPaymentsSample.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = InAppPaymentsSample/InAppPaymentsSample.entitlements;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = X622SX6D57;
@@ -529,7 +555,7 @@
 					"$(PROJECT_DIR)",
 				);
 				INFOPLIST_FILE = InAppPaymentsSample/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 11.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 16;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "BL.google-square-hackathon";
 				PRODUCT_NAME = InAppPaymentsSample;

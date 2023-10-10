@@ -15,7 +15,11 @@ struct NewIn14App: App {
 
     var body: some Scene {
         WindowGroup {
-            CardEntryForm()
+//            CardEntryForm()
+            ZStack {
+                Text("hi there")
+                ApplePayFormViewController()
+            }
         }
     }
 }
